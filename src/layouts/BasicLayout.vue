@@ -14,7 +14,9 @@
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
+          <!-- 指令式按钮权限 -->
           <a-icon
+            v-authI="['admin']"
             class="trigger"
             :type="collapsed ? 'menu-unfold' : 'menu-fold'"
             @click="collapsed = !collapsed"
@@ -29,8 +31,9 @@
         </a-layout-footer>
       </a-layout>
     </a-layout>
-    <Auth :auth='["admin"]'>
-    <SettingDrawer></SettingDrawer>
+    <!-- 组件式按钮权限 -->
+    <Auth :auth="['admin']">
+      <SettingDrawer></SettingDrawer>
     </Auth>
   </div>
 </template>
