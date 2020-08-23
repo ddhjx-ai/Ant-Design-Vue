@@ -31,7 +31,7 @@
         </a-layout-footer>
       </a-layout>
     </a-layout>
-    <!-- 组件式按钮权限 -->
+    <!-- 组件式按钮权限 较为灵活-->
     <Auth :auth="['admin']">
       <SettingDrawer></SettingDrawer>
     </Auth>
